@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Doorman Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f5f7;
+      }
+      .sidebar {
+        width: 250px;
+        background-color: #e53a3a;
+        color: white;
+        position: fixed;
+        height: 100%;
+        padding: 20px;
+      }
+      .sidebar img {
+        display: block;
+        margin: 0 auto 20px;
+        width: 80%;
+      }
+      .sidebar h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+      .sidebar ul li {
+        margin-bottom: 10px;
+      }
+      .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .sidebar ul li a:hover {
+        background-color: #c53030;
+      }
+      .main-content {
+        margin-left: 270px;
+        padding: 20px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .header input[type="search"] {
+        padding: 10px;
+        width: 300px;
+        border-radius: 20px;
+        border: 1px solid #ddd;
+      }
+      .header .profile {
+        display: flex;
+        align-items: center;
+      }
+      .header .profile img {
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .quick-stats {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .quick-boxes {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 48%;
+      }
+      .resident-list {
+        margin-top: 20px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .table-container {
+        width: 100%;
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f5f5f5;
+      }
+      @media (max-width: 768px) {
+        .sidebar {
+          display: block;
+          position: relative;
+          width: 100%;
+          height: auto;
+          padding: 10px;
+        }
+        .main-content {
+          margin-left: 0;
+          padding: 10px;
+        }
+        .header input[type="search"] {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+        .quick-stats {
+          flex-direction: column;
+        }
+        .quick-stats div {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+      .bell-img {
+        width: 20px; 
+        height: auto; 
+        margin-right: 10px; 
+      }
+    </style>
+  </head>
+  <body>
+    <script src="resident-list.js"></script>
+    <div class="sidebar">
+      <img src="/logo/logo.png" alt="Logo" />
+      <h1>Virtual Doorman</h1>
+      <ul>
+        <li><a href="vdm_services.html">Virtual Doorman Services</a></li>
+        <li><a href="billing.html">Billing</a></li>
+        <li><a href="display_residents.html">Residents</a></li>
+        <li><a href="Resident.html">Manage Residents</a></li>
+        <li><a href="service_repair.html">Service/Installation</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="concierge_chat.html">Concierge Chat</a></li>
+        <li><a href="onboarding.html">Settings</a></li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <div class="header">
+        <input type="search" placeholder="Search..." />
+        <div class="profile">
+          <img src="/logo/bell.png" alt="notification-bell" class="bell-img" />
+          <img src="https://via.placeholder.com/40" alt="Profile Picture" />
+          <span>Ammar Richard</span>
+        </div>
+      </div>
+      <div class="quick-stats">
+        <div class="quick-boxes">
+          <div>
+            <img src="/logo/bill.png" alt="bill" />
+            <h2>Current Bill</h2>
+            <p>Due: 02-Aug-23</p>
+            <h1>$1768.00</h1>
+          </div>
+          <button
+            style="
+              background-color: #e53a3a;
+              color: white;
+              padding: 10px;
+              border: none;
+              border-radius: 5px;
+            "
+          >
+            Pay Now
+          </button>
+        </div>
+        <div class="quick-boxes">
+          <div>
+            <img src="/logo/form.png" alt="form" />
+            <h2>Virtual Doorman</h2>
+            <p>Contract No: #10546</p>
+            <p>Duration: 1 Year</p>
+            <h1>$1768.00</h1>
+          </div>
+          <button
+            style="
+              background-color: #e53a3a;
+              color: white;
+              padding: 10px;
+              border: none;
+              border-radius: 5px;
+            "
+          >
+            Re-new
+          </button>
+        </div>
+      </div>
+      <resident-list></resident-list>
+  </body>
+</html>
