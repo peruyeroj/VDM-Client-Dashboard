@@ -57,6 +57,9 @@ class ResidentInsert extends HTMLElement {
       </style>
 
       <h1>Upload/Update Residents</h1>
+      <h2>View 34
+          401 E 34th St, New York, NY 10016
+    </h2>
       <form id="onboardingForm" enctype="multipart/form-data">
         <div class="table-container">
           <table>
@@ -132,9 +135,12 @@ class ResidentInsert extends HTMLElement {
     ];
 
     this.apartmentNames = [
-      "123 Main St, New York, NY",
-      "456 Park Ave, New York, NY",
-      "789 Broadway, New York, NY",
+      "Central Park Residences",
+      "Hudson Heights Apartments",
+      "Empire State Towers",
+      "Broadway Plaza",
+      "Riverside Gardens",
+      "Manhattan Skyline Apartments",
     ];
   }
 

@@ -100,7 +100,7 @@ class ResidentList extends HTMLElement {
         }
       </style>
 
-      <h1>Resident List</h1>
+      <h1 style="font-size: 1.5em;">Resident List</h1>
 
       <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search by name">
