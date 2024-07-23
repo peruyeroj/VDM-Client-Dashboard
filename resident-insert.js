@@ -59,7 +59,7 @@ class ResidentInsert extends HTMLElement {
       <h1>Upload/Update Residents</h1>
       <h2>View 34
           401 E 34th St, New York, NY 10016
-    </h2>
+      </h2>
       <form id="onboardingForm" enctype="multipart/form-data">
         <div class="table-container">
           <table>
