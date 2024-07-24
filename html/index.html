@@ -141,29 +141,84 @@
         height: auto; 
         margin-right: 10px; 
       }
+
+      .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background-color: #af4c6a;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #af4c6a;
+    }
     </style>
   </head>
   <body>
-    <script src="resident-list.js"></script>
+    <script src="/js/resident-list.js"></script>
     <div class="sidebar">
-      <img src="/logo/logo.png" alt="Logo" />
+      <div class="dropdown">
+        <button class="dropbtn">Select Building</button>
+        <div class="dropdown-content">
+          <a href="#">Beatrice Apartments</a>
+          <a href="#">Prism at Park Avenue South Apartments</a>
+          <a href="#">777 6th Avenue Apartments</a>
+          <a href="#">Parc East Apartments</a>
+          <a href="#">Murray Hill Tower Apartments</a>
+        </div>
+      </div>      
+      <img src="/assets/images/logo.png" alt="Logo" />
       <h1>Virtual Doorman</h1>
       <ul>
-        <li><a href="vdm_services.html">Virtual Doorman Services</a></li>
-        <li><a href="billing.html">Billing</a></li>
-        <li><a href="display_residents.html">Residents</a></li>
-        <li><a href="Resident.html">Manage Residents</a></li>
-        <li><a href="service_repair.html">Service/Installation</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="concierge_chat.html">Concierge Chat</a></li>
-        <li><a href="onboarding.html">Settings</a></li>
+        <ul>
+          <li><a href="/html/vdm_services.html">Virtual Doorman Services</a></li>
+          <li><a href="/html/billing.html">Billing</a></li>
+          <li><a href="/html/display_residents.html">Residents</a></li>
+          <li><a href="/html/Resident.html">Manage Residents</a></li>
+          <li><a href="/html/service_repair.html">Service/Installation</a></li>
+          <li><a href="/html/resources.html">Resources</a></li>
+          <li><a href="/html/concierge_chat.html">Concierge Chat</a></li>
+          <li><a href="/html/onboarding.html">Settings</a></li>
+      </ul>
+      
       </ul>
     </div>
     <div class="main-content">
       <div class="header">
         <input type="search" placeholder="Search..." />
         <div class="profile">
-          <img src="/logo/bell.png" alt="notification-bell" class="bell-img" />
+          <img src="/assets/images/bell.png" alt="notification-bell" class="bell-img" />
           <img src="https://via.placeholder.com/40" alt="Profile Picture" />
           <span>Ammar Richard</span>
         </div>
@@ -171,7 +226,7 @@
       <div class="quick-stats">
         <div class="quick-boxes">
           <div>
-            <img src="/logo/bill.png" alt="bill" />
+            <img src="/assets/images/bill.png" alt="bill" />
             <h2>Current Bill</h2>
             <p>Due: 02-Aug-23</p>
             <h1>$1768.00</h1>
@@ -190,7 +245,7 @@
         </div>
         <div class="quick-boxes">
           <div>
-            <img src="/logo/form.png" alt="form" />
+            <img src="/assets/images/form.png" alt="form" />
             <h2>Virtual Doorman</h2>
             <p>Contract No: #10546</p>
             <p>Duration: 1 Year</p>

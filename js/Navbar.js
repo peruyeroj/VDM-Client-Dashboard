@@ -45,14 +45,14 @@ class Navbar extends HTMLElement {
         <header>
           <div class="navbar">
             <div class="logo">
-              <a href='index.html'><img src="logo/logo.png" alt="Logo" /></a>
+              <a href='/html/index.html'><img src="/assets/images/logo.png" alt="Logo" /></a>
             </div>
             <nav class="nav-links">
               <ul>
-                <li><a href="index.html">Dashboard</a></li>
-                <li><a href="Resident.html">Manage Residents</a></li>
-                <li><a href="display_residents.html">Resident List</a></li>
-                <li><a href="service_repair.html">Install/Service</a></li>
+                <li><a href="/html/index.html">Dashboard</a></li>
+                <li><a href="/html/Resident.html">Manage Residents</a></li>
+                <li><a href="/html/display_residents.html">Resident List</a></li>
+                <li><a href="/html/service_repair.html">Install/Service</a></li>
               </ul>
             </nav>
           </div>

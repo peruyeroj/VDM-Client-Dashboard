@@ -120,7 +120,7 @@ class ResidentList extends HTMLElement {
               <th>Position in Household</th>
               <th>Start Lease Date</th>
               <th>End Lease Date</th>
-              <th>Apartment Name</th>
+              <th>Apartment Unit</th>
               <th>Actions</th>
             </tr>
           </thead>

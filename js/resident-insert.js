@@ -75,7 +75,7 @@ class ResidentInsert extends HTMLElement {
                 <th>Position in Household</th>
                 <th>Start Lease Date</th>
                 <th>End Lease Date</th>
-                <th>Apartment Name</th>
+                <th>Apartment Unit</th>
                 <th>Delete</th>
               </tr>
             </thead>
@@ -107,7 +107,7 @@ class ResidentInsert extends HTMLElement {
               <th>Position in Household</th>
               <th>Start Lease Date</th>
               <th>End Lease Date</th>
-              <th>Apartment Name</th>
+              <th>Apartment Unit</th>
               <th>Delete</th>
             </tr>
           </thead>
@@ -135,12 +135,12 @@ class ResidentInsert extends HTMLElement {
     ];
 
     this.apartmentNames = [
-      "Central Park Residences",
-      "Hudson Heights Apartments",
-      "Empire State Towers",
-      "Broadway Plaza",
-      "Riverside Gardens",
-      "Manhattan Skyline Apartments",
+      "1C - Studio Apartment",
+      "1A - One-Bedroom Apartment",
+      "1b - Two-Bedroom Apartment",
+      "1C - Studio Apartment",
+      "1D - Two-Bedroom Apartment",
+      "1E - Three-Bedroom Apartment",
     ];
   }
 
