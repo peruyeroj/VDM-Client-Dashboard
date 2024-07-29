@@ -44,7 +44,8 @@
       }
 
       input[type="text"],
-      input[type="email"] {
+      input[type="email"],
+      input[type="tel"] {
         width: 100%;
         padding: 8px;
         margin: 5px 0 20px;
@@ -65,7 +66,7 @@
       button:hover {
         background-color: #0056b3;
       }
-      /* Basic styling for navbar */
+
       .navbar {
         display: flex;
         justify-content: space-between;
@@ -119,23 +120,6 @@
         margin-bottom: 10px;
       }
 
-      .contact-container {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      .contact-column {
-        width: 30%;
-        padding: 10px;
-      }
-
-      .contact-column label,
-      .contact-column input,
-      .contact-column textarea {
-        display: block;
-        margin-bottom: 10px;
-      }
-
       .file-upload,
       .directions-textbox {
         margin-top: 20px;
@@ -145,6 +129,7 @@
         display: flex;
         align-items: center;
       }
+
       .flex-item {
         margin-right: 10px;
       }
@@ -154,15 +139,17 @@
     <header>
       <div class="navbar">
         <div class="logo">
-          <a href="index.html"><img src="logo/logo.png" alt="Logo" /></a>
+          <a href="/index.html"
+            ><img src="/assets/images/logo.png" alt="Logo"
+          /></a>
         </div>
         <nav class="nav-links">
           <ul>
             <li>
-              <a href="Onboarding.html">Board President/Principal Form</a>
+              <a href="/html/onboarding.html">Board President/Principal Form</a>
             </li>
             <li>
-              <a href="Onboarding2.html"
+              <a href="/html/Onboarding2.html"
                 >Building Representative/Building Manager Forms</a
               >
             </li>
@@ -178,50 +165,98 @@
         <div class="form-group">
           <div>
             <label for="siteName">Site Name:</label>
-            <input type="text" id="siteName" name="siteName" />
+            <input
+              type="text"
+              id="siteName"
+              name="siteName"
+              placeholder="Main Office"
+            />
           </div>
           <div>
             <label for="siteDBA">d/b/a:</label>
-            <input type="text" id="siteDBA" name="siteDBA" />
+            <input
+              type="text"
+              id="siteDBA"
+              name="siteDBA"
+              placeholder="Main Office LLC"
+            />
           </div>
           <div>
             <label for="siteAddress">Site Physical Address:</label>
-            <input type="text" id="siteAddress" name="siteAddress" />
+            <input
+              type="text"
+              id="siteAddress"
+              name="siteAddress"
+              placeholder="123 Main St."
+            />
           </div>
           <div>
             <label for="siteCity">City:</label>
-            <input type="text" id="siteCity" name="siteCity" />
+            <input
+              type="text"
+              id="siteCity"
+              name="siteCity"
+              placeholder="New York"
+            />
           </div>
           <div>
             <label for="siteState">State:</label>
-            <input type="text" id="siteState" name="siteState" />
+            <input
+              type="text"
+              id="siteState"
+              name="siteState"
+              placeholder="NY"
+            />
           </div>
           <div>
             <label for="siteZip">Zip Code:</label>
-            <input type="text" id="siteZip" name="siteZip" />
+            <input
+              type="text"
+              id="siteZip"
+              name="siteZip"
+              placeholder="10001"
+            />
           </div>
           <div class="flex-container">
-            <label for="crossStreets">Cross Street(s):</label>
-            <input type="text" id="crossStreets" name="crossStreets" />
-            <label for="crossStreets">Cross Street(s):</label>
-            <input type="text" id="crossStreets2" name="crossStreets2" />
+            <div class="flex-item">
+              <label for="crossStreets">Cross Street(s):</label>
+              <input
+                type="text"
+                id="crossStreets"
+                name="crossStreets"
+                placeholder="1st Ave"
+              />
+            </div>
+            <div class="flex-item">
+              <label for="crossStreets2">Cross Street(s):</label>
+              <input
+                type="text"
+                id="crossStreets2"
+                name="crossStreets2"
+                placeholder="2nd Ave"
+              />
+            </div>
           </div>
           <div>
             <label for="sitePhone">Site Phone #:</label>
-            <input type="text" id="sitePhone" name="sitePhone" />
+            <input
+              type="tel"
+              id="sitePhone"
+              name="sitePhone"
+              placeholder="(123) 456-7890"
+            />
           </div>
           <div>
             <label for="additionalSitePhone">Additional Site Phone #:</label>
             <input
-              type="text"
-              id="additionalPremisePhone"
-              name="additionalPremisePhone"
+              type="tel"
+              id="additionalSitePhone"
+              name="additionalSitePhone"
+              placeholder="(098) 765-4321"
             />
           </div>
         </div>
       </section>
-
-      <!-- Management Company -->
 
       <!-- Authorities Phone Numbers -->
       <section>
@@ -229,28 +264,45 @@
         <div class="form-group">
           <div>
             <label for="policePhone">Police Dept. Ph#:</label>
-            <input type="text" id="policePhone" name="policePhone" />
+            <input
+              type="tel"
+              id="policePhone"
+              name="policePhone"
+              placeholder="(123) 456-7890"
+            />
           </div>
           <div>
             <label for="precinctNumber">Precinct #:</label>
-            <input type="text" id="precinctNumber" name="precinctNumber" />
+            <input
+              type="text"
+              id="precinctNumber"
+              name="precinctNumber"
+              placeholder="10th Precinct"
+            />
           </div>
           <div>
             <label for="fireDeptPhone">Fire Dept. Ph#:</label>
-            <input type="text" id="fireDeptPhone" name="fireDeptPhone" />
+            <input
+              type="tel"
+              id="fireDeptPhone"
+              name="fireDeptPhone"
+              placeholder="(123) 456-7890"
+            />
           </div>
           <div>
             <label for="guardCompanyPhone"
               >Guard Company Ph# (if applicable):</label
             >
             <input
-              type="text"
+              type="tel"
               id="guardCompanyPhone"
               name="guardCompanyPhone"
+              placeholder="(123) 456-7890"
             />
           </div>
         </div>
       </section>
+
       <section>
         <h2>Emergency Contacts</h2>
         <div class="contact-container">
@@ -260,6 +312,7 @@
               type="text"
               id="emer_contact_name_1"
               name="emer_contact_name_1"
+              placeholder="John Doe"
             />
 
             <label for="emer_contact_email_1"
@@ -269,15 +322,17 @@
               type="email"
               id="emer_contact_email_1"
               name="emer_contact_email_1"
+              placeholder="john.doe@example.com"
             />
 
             <label for="emer_contact_mobile_1"
               >Emergency Contact #1 Mobile:</label
             >
             <input
-              type="text"
+              type="tel"
               id="emer_contact_mobile_1"
               name="emer_contact_mobile_1"
+              placeholder="(123) 456-7890"
             />
 
             <label for="emer_contact_secret_question_1"
@@ -287,6 +342,7 @@
               type="text"
               id="emer_contact_secret_question_1"
               name="emer_contact_secret_question_1"
+              placeholder="Mother's maiden name?"
             />
 
             <label for="emer_contact_secret_answer_1"
@@ -296,6 +352,7 @@
               type="text"
               id="emer_contact_secret_answer_1"
               name="emer_contact_secret_answer_1"
+              placeholder="Smith"
             />
           </div>
 
@@ -305,6 +362,7 @@
               type="text"
               id="emer_contact_name_2"
               name="emer_contact_name_2"
+              placeholder="Jane Doe"
             />
 
             <label for="emer_contact_email_2"
@@ -314,15 +372,17 @@
               type="email"
               id="emer_contact_email_2"
               name="emer_contact_email_2"
+              placeholder="jane.doe@example.com"
             />
 
             <label for="emer_contact_mobile_2"
               >Emergency Contact #2 Mobile:</label
             >
             <input
-              type="text"
+              type="tel"
               id="emer_contact_mobile_2"
               name="emer_contact_mobile_2"
+              placeholder="(123) 456-7890"
             />
 
             <label for="emer_contact_secret_question_2"
@@ -332,6 +392,7 @@
               type="text"
               id="emer_contact_secret_question_2"
               name="emer_contact_secret_question_2"
+              placeholder="First pet's name?"
             />
 
             <label for="emer_contact_secret_answer_2"
@@ -341,6 +402,7 @@
               type="text"
               id="emer_contact_secret_answer_2"
               name="emer_contact_secret_answer_2"
+              placeholder="Fluffy"
             />
           </div>
 
@@ -350,6 +412,7 @@
               type="text"
               id="emer_contact_name_3"
               name="emer_contact_name_3"
+              placeholder="Bob Smith"
             />
 
             <label for="emer_contact_email_3"
@@ -359,15 +422,17 @@
               type="email"
               id="emer_contact_email_3"
               name="emer_contact_email_3"
+              placeholder="bob.smith@example.com"
             />
 
             <label for="emer_contact_mobile_3"
               >Emergency Contact #3 Mobile:</label
             >
             <input
-              type="text"
+              type="tel"
               id="emer_contact_mobile_3"
               name="emer_contact_mobile_3"
+              placeholder="(123) 456-7890"
             />
 
             <label for="emer_contact_secret_question_3"
@@ -377,6 +442,7 @@
               type="text"
               id="emer_contact_secret_question_3"
               name="emer_contact_secret_question_3"
+              placeholder="Favorite teacher?"
             />
 
             <label for="emer_contact_secret_answer_3"
@@ -386,9 +452,11 @@
               type="text"
               id="emer_contact_secret_answer_3"
               name="emer_contact_secret_answer_3"
+              placeholder="Mr. Johnson"
             />
           </div>
         </div>
+
         <div class="file-upload">
           <label for="building_rules">Upload Building Rules:</label>
           <input type="file" id="building_rules" name="building_rules" />
@@ -403,19 +471,47 @@
             name="package_room_directions"
             rows="4"
             cols="50"
+            placeholder="Enter through the main entrance and turn right."
           ></textarea>
         </div>
 
         <div>
           <label for="floor_plan"
-            >Upload Floor Plan(This may be handwritten/sketched):</label
+            >Upload Floor Plan (This may be handwritten/sketched):</label
           >
           <input type="file" id="floor_plan" name="floor_plan" />
         </div>
       </section>
-      <button type="submit">
-        <a id="submit3" href="index.html">Submit</a>
-      </button>
+
+      <button type="submit">Submit</button>
     </form>
+
+    <script>
+      function formatPhoneNumber(value) {
+        if (!value) return value;
+        const phoneNumber = value.replace(/[^\d]/g, "");
+        const phoneNumberLength = phoneNumber.length;
+        if (phoneNumberLength < 4) return phoneNumber;
+        if (phoneNumberLength < 7) {
+          return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+        }
+        return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+          3,
+          6
+        )}-${phoneNumber.slice(6, 10)}`;
+      }
+
+      function phoneNumberFormatter(event) {
+        const inputField = event.target;
+        const formattedInputValue = formatPhoneNumber(inputField.value);
+        inputField.value = formattedInputValue;
+      }
+
+      document
+        .querySelectorAll('input[type="tel"]')
+        .forEach(function (inputField) {
+          inputField.addEventListener("input", phoneNumberFormatter);
+        });
+    </script>
   </body>
 </html>

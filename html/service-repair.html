@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Installation Request</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+    <style>
+      input[type="tel"] {
+        max-width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="/js/Navbar.js"></script>
+    <nav-bar></nav-bar>
+    <form method="post" action="send-email.php" id="installation-form">
+      <div class="section">
+        <h3>Onsite Contact Information</h3>
+        <label>Onsite Contact Name:</label>
+        <input
+          type="text"
+          name="installContactName"
+          placeholder="James Smith"
+          required
+        />
+        <label>Mobile Number:</label>
+        <input
+          type="tel"
+          name="installContactMobile"
+          id="installContactMobile"
+          placeholder="(212)-400-6440"
+          required
+        />
+        <label>Email:</label>
+        <input
+          type="email"
+          name="installContactEmail"
+          placeholder="James.smith@gmail.com"
+          required
+        />
+      </div>
+      <div class="section">
+        <h3>Installation Details</h3>
+        <label>Preferred Installation Date:</label>
+        <div class="flex-row">
+          <input type="date" name="preferredDate" required />
+          <label><input type="checkbox" name="installationASAP" /> ASAP</label>
+        </div>
+        <label>Expected Total Cost of Ownership:</label>
+        <input type="number" name="expectedCost" placeholder="5500" required />
+        <label>Details of What to Install:</label>
+        <textarea
+          name="installDetails"
+          placeholder="Install a CCTV camera in the back right corner of the lobby"
+          required
+        ></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      function formatPhoneNumber(value) {
+        if (!value) return value;
+        const phoneNumber = value.replace(/[^\d]/g, "");
+        const phoneNumberLength = phoneNumber.length;
+        if (phoneNumberLength < 4) return phoneNumber;
+        if (phoneNumberLength < 7) {
+          return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+        }
+        return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+          3,
+          6
+        )}-${phoneNumber.slice(6, 10)}`;
+      }
+
+      function phoneNumberFormatter() {
+        const inputField = document.getElementById("installContactMobile");
+        const formattedInputValue = formatPhoneNumber(inputField.value);
+        inputField.value = formattedInputValue;
+      }
+
+      const phoneNumberField = document.getElementById("installContactMobile");
+      phoneNumberField.addEventListener("input", phoneNumberFormatter);
+    </script>
+  </body>
+</html>

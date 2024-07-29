@@ -3,7 +3,7 @@ class ResidentInsert extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.innerHTML = `
-      <style>
+      <style>z
         body {
           font-family: Arial, sans-serif;
           margin: 0;
