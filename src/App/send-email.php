@@ -1,9 +1,9 @@
 <?php
 // Load Composer's autoloader
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '../../../vendor/autoload.php';
 
 // Load environment variables
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
 
 // Get the environment variables
@@ -111,7 +111,7 @@ try {
     $mail->send();
 
     // Redirect to the confirmation page
-    header("Location: sent.html");
+    header("Location: /public/html/email_sent/sent.html");
     exit();
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

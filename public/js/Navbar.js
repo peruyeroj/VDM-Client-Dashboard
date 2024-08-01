@@ -49,10 +49,10 @@ class Navbar extends HTMLElement {
             </div>
             <nav class="nav-links">
               <ul>
-                <li><a href="/index.html">Dashboard</a></li>
-                <li><a href="/html/Resident.html">Manage Residents</a></li>
-                <li><a href="/html/display_residents.html">Resident List</a></li>
-                <li><a href="/html/service-installation.html">Install/Service</a></li>
+                <li><a href="/public/index.html">Dashboard</a></li>
+                <li><a href="/public/html/residents/Resident.html">Manage Residents</a></li>
+                <li><a href="/public/html/residents/display_residents.html">Resident List</a></li>
+                <li><a href="/public/html/service_installation/service-installation.html">Install/Service</a></li>
               </ul>
             </nav>
           </div>
@@ -61,7 +61,7 @@ class Navbar extends HTMLElement {
 
     // Set the href attribute dynamically
     const logoLink = shadow.getElementById("logo-link");
-    logoLink.href = `${window.location.origin}/index.html`;
+    logoLink.href = `${window.location.origin}/public/index.html`;
   }
 }
 
