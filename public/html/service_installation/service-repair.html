@@ -22,50 +22,46 @@
       action="../../../src/App/send-email.php"
       id="installation-form"
     >
-      <div class="section">
-        <h3>Onsite Contact Information</h3>
-        <label>Onsite Contact Name:</label>
-        <input
-          type="text"
-          name="installContactName"
-          placeholder="James Smith"
-          required
-        />
-        <label>Mobile Number:</label>
-        <input
-          type="tel"
-          name="installContactMobile"
-          id="installContactMobile"
-          placeholder="(212)-400-6440"
-          required
-        />
-        <label>Email:</label>
-        <input
-          type="email"
-          name="installContactEmail"
-          placeholder="James.smith@gmail.com"
-          required
-        />
-      </div>
-      <div class="section">
-        <h3>Installation Details</h3>
-        <label>Preferred Installation Date:</label>
-        <div class="flex-row">
-          <input type="date" name="preferredDate" required />
-          <label><input type="checkbox" name="installationASAP" /> ASAP</label>
+      <div id="service-repair-fields" class="content">
+        <div class="section">
+          <h3>Reporter's Information (Individual reporting service repair)</h3>
+          <label>Reporter's Name:</label>
+          <input type="text" name="reporterName" />
+          <label
+            >Complaint Details (The service or repair that is being
+            requested):</label
+          >
+          <textarea name="complaintDetails"></textarea>
+          <label>Mobile Number:</label>
+          <input type="text" name="reporterMobile" />
+          <label>Email:</label>
+          <input type="email" name="reporterEmail" />
         </div>
-        <label>Expected Total Cost of Ownership:</label>
-        <input type="number" name="expectedCost" placeholder="5500" required />
-        <label>Details of What to Install:</label>
-        <textarea
-          name="installDetails"
-          placeholder="Install a CCTV camera in the back right corner of the lobby"
-          required
-        ></textarea>
+        <div class="section">
+          <h3>Onsite Contact Information</h3>
+          <label>Onsite Contact Name:</label>
+          <input type="text" name="onsiteContactName" />
+          <label>Mobile Number:</label>
+          <input type="text" name="onsiteContactMobile" />
+          <label>Email:</label>
+          <input type="email" name="onsiteContactEmail" />
+        </div>
+        <div class="section">
+          <h3>Preferred Service Repair Date</h3>
+          <div class="flex-row">
+            <input
+              type="date"
+              name="serviceRepairDate"
+              class="small-date-input"
+            />
+            <label
+              ><input type="checkbox" name="serviceRepairASAP" /> ASAP</label
+            >
+          </div>
+        </div>
       </div>
       <button type="submit">Submit</button>
     </form>
-
     <script>
       function formatPhoneNumber(value) {
         if (!value) return value;
